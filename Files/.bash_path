@@ -1,0 +1,24 @@
+# Bash_Startup_Files
+# https://github.com/AlanTBarlow/Bash_Startup_Files
+#
+# Copyright (c) 2019 Alan T Barlow
+
+# This document is where you define your path.
+
+# appends the argument to the end of the existing path
+appendPath() {
+    if [ -d "${1}" ] && [[ ":${PATH}:" != *":${1}:"* ]]; then
+        PATH=${PATH}:${1}
+    fi
+}
+
+# prepends the argument to the beginning of the existing path so that it has preference over other paths.
+prependPath() {
+    if [ -d "${1}" ] && [[ ":${PATH}:" != *":${1}:"* ]]; then
+        PATH=${1}:${PATH}
+    fi
+}
+
+# add to path by using 'appendPath "path to append"' or 'prependPath "path to prepend"'
+# for example; appendPath "/bin"
+appendPath "/Users/Alan/iCloud_Drive/dev/tools/flutter/bin"

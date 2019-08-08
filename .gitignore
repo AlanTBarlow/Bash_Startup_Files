@@ -1,0 +1,8 @@
+# Bash_Startup_Files
+# https://github.com/AlanTBarlow/Bash_Startup_Files
+#
+# Copyright (c) 2019 Alan T Barlow
+
+# ignore macOS system files
+.DS_Store
+

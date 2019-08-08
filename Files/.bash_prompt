@@ -1,0 +1,33 @@
+# Bash_Startup_Files
+# https://github.com/AlanTBarlow/Bash_Startup_Files
+#
+# Copyright (c) 2019 Alan T Barlow
+
+# This document is where you build your prompt.
+
+# creates the prompt variable starting with 2 new lines.
+prompt="\n\n"
+
+# A function to easily add new lines to the prompt. expects 2 parameters, the title and the value.
+addPromptLine() {
+    # Creates the following formats to be added to the prompt, using parameter 1 as the
+    # title and parameter 2 as the value
+    local title="${bold}${1}${reset}"
+    local value="${blue}${2}${reset}"
+
+    # Makes the prompt equal to itself plus adds the title and value as a new line.
+    prompt="${prompt}${title}: ${value}\n"
+}
+
+# calls addPromptLine to add new lines to the prompt, called using "addPromptLine 'Line Title' 'Line Value'"
+addPromptLine "Date" "\d"
+addPromptLine "Time" "\@"
+addPromptLine "Host" "\h"
+addPromptLine "User" "\u"
+addPromptLine "Working Directory" "\w"
+
+# assignes the prompt to the official prompt variable and adds the command number as the final prompt line.
+export PS1="${prompt}\n\#> "
+
+# Makes the extended prompt lines look the same as the final primary prompt line.
+export PS2="\#> "
