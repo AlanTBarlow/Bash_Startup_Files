@@ -28,12 +28,12 @@ underline='\e[4m'
 string="%s${reset}"
 boldString="${bold}${string}"
 
+# checks if the initialized shell is a login shell and prints the output.
+shopt -q login_shell && echo 'A login shell has been initialized, all files have been loaded.' \
+|| echo 'A non-login shell has been initialized, the .bash_profile and .bash_path files have NOT been loaded.'
+
 # load the .bash_aliases file to get the aliases
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 
 # load the .bash_prompt file to get the prompt
 if [ -f ~/.bash_prompt ]; then . ~/.bash_prompt; fi
-
-# checks if the initialized shell is a login shell and prints the output.
-shopt -q login_shell && echo 'A login shell has been initialized, all files have been loaded.' \
-|| echo 'A non-login shell has been initialized, the .bash_profile and .bash_path files have NOT been loaded.'
