@@ -17,10 +17,10 @@ printAliasHint() {
 # Prints a list of aliases upon being called.
 getAliases() {
     # The format for the header text
-    local headerFormat="\n${underline}${boldString}\n\n"
+    local headerFormat="\n${yellow}${underline}${boldString}\n\n"
 
     # The format for the text of each alias in the list.
-    local itemFormat="${boldString}: ${string}\n\n"
+    local itemFormat="${yellow}${boldString}: ${string}\n\n"
 
     # Prints the header using the headerFormat above.
     printf "${headerFormat}" "Available Aliases"
