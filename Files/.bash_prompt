@@ -27,7 +27,7 @@ addPromptLine "User" "\u"
 addPromptLine "Working Directory" "\w"
 
 # assignes the prompt to the official prompt variable and adds the command number as the final prompt line.
-export PS1="${prompt}\n\#> "
+export PS1="${prompt}\n\# > "
 
 # Makes the extended prompt lines look the same as the final primary prompt line.
-export PS2="\#> "
+export PS2="\# > "
