@@ -21,4 +21,3 @@ prependPath() {
 
 # add to path by using 'appendPath "path to append"' or 'prependPath "path to prepend"'
 # for example; appendPath "/bin"
-appendPath "/Users/Alan/iCloud_Drive/dev/tools/flutter/bin"
