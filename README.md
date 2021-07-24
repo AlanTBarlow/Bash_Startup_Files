@@ -1,4 +1,4 @@
-# Bash_Startup_Files
+# Bash Startup Files
 
 A collection of bash initialization files that you can either use as is or customize to fit your needs. The files have been organized to call the `.bashrc` from the `.bash_profile`. The `.bash_path` was created to simplify adding to the path and is called in the `.bash_profile`. The `.bash_aliases` and `.bash_prompt` have been created to keep things organized and are called in the `.bashrc`.
 
